@@ -1,3 +1,4 @@
+/* eslint-env jest */
 /**
  * Jest setup file.
  */
@@ -7,7 +8,7 @@ global.wp = {
 	i18n: {
 		__: jest.fn( ( text ) => text ),
 		_e: jest.fn( ( text ) => text ),
-		sprintf: jest.fn( ( text, ...args ) => text ),
+		sprintf: jest.fn( ( text ) => text ),
 	},
 	element: {
 		useState: jest.fn(),

@@ -1,4 +1,5 @@
-import { test, expect } from '@playwright/test';
+/* eslint-disable no-unused-vars */
+import { test } from '@playwright/test';
 
 test.describe( 'Weather Block', () => {
 	test.beforeEach( async ( { page } ) => {
@@ -11,7 +12,7 @@ test.describe( 'Weather Block', () => {
 		await page.goto( '/wp-admin' );
 	} );
 
-	test( 'weather block renders with default state', async ( { page } ) => {
+	test( 'weather block renders with default state', async () => {
 		test.skip( 'Skipping e2e test - requires WordPress test environment' );
 
 		// This test would run in a real WordPress environment
@@ -28,7 +29,7 @@ test.describe( 'Weather Block', () => {
 		// await expect(block.locator('text=Enter a location to see weather information')).toBeVisible();
 	} );
 
-	test( 'weather block settings panel', async ( { page } ) => {
+	test( 'weather block settings panel', async () => {
 		test.skip( 'Skipping e2e test - requires WordPress test environment' );
 
 		// This test would run in a real WordPress environment
@@ -56,7 +57,7 @@ test.describe( 'Weather Block', () => {
 		// await expect(displayModeRadio).toBeVisible();
 	} );
 
-	test( 'weather block visual regression', async ( { page } ) => {
+	test( 'weather block visual regression', async () => {
 		test.skip(
 			'Skipping visual regression test - requires WordPress test environment'
 		);
@@ -91,7 +92,7 @@ test.describe( 'Weather Block', () => {
 		// await expect(block).toHaveScreenshot('weather-block-fahrenheit.png');
 	} );
 
-	test( 'weather block accessibility', async ( { page } ) => {
+	test( 'weather block accessibility', async () => {
 		test.skip(
 			'Skipping accessibility test - requires WordPress test environment'
 		);

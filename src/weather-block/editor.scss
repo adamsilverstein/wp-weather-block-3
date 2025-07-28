@@ -14,7 +14,7 @@
 	border: 1px solid #ccc;
 	border-radius: 8px;
 	padding: 20px;
-	
+
 	.weather-block__placeholder {
 		text-align: center;
 		color: #666;
@@ -28,7 +28,7 @@
 		align-items: center;
 		padding: 40px 20px;
 		gap: 16px;
-		
+
 		p {
 			color: #666;
 			margin: 0;
@@ -40,25 +40,27 @@
 		padding: 20px;
 		border-radius: 8px;
 		min-height: 200px;
-		
+
 		&--light {
-			background: #ffffff;
-			color: #333333;
+			background: #fff;
+			color: #333;
 		}
-		
+
 		&--dark {
 			background: #2c3e50;
-			color: #ffffff;
+			color: #fff;
 		}
-		
+
 		&--auto {
+
 			@media (prefers-color-scheme: dark) {
 				background: #2c3e50;
-				color: #ffffff;
+				color: #fff;
 			}
+
 			@media (prefers-color-scheme: light) {
-				background: #ffffff;
-				color: #333333;
+				background: #fff;
+				color: #333;
 			}
 		}
 	}
@@ -119,7 +121,7 @@
 		text-align: center;
 		padding: 20px;
 		color: #d63638;
-		
+
 		p {
 			margin: 0;
 		}

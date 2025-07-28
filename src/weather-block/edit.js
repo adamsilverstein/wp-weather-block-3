@@ -66,6 +66,7 @@ export default function Edit( { attributes, setAttributes } ) {
 			setWeatherData( null );
 			setError( null );
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [ location, units ] );
 
 	/**
@@ -111,6 +112,8 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	/**
 	 * Handle location input change.
+	 *
+	 * @param {string} value The new location value.
 	 */
 	const handleLocationChange = ( value ) => {
 		setAttributes( { location: value } );
@@ -118,6 +121,8 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	/**
 	 * Handle units toggle change.
+	 *
+	 * @param {boolean} value Whether to use imperial units.
 	 */
 	const handleUnitsChange = ( value ) => {
 		setAttributes( { units: value ? 'imperial' : 'metric' } );
@@ -125,6 +130,8 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	/**
 	 * Handle display mode change.
+	 *
+	 * @param {string} value The new display mode value.
 	 */
 	const handleDisplayModeChange = ( value ) => {
 		setAttributes( { displayMode: value } );
@@ -138,7 +145,7 @@ export default function Edit( { attributes, setAttributes } ) {
 			return (
 				<div className="weather-block__loading">
 					<Spinner />
-					<p>{ __( 'Loading weather data...', 'weather-block' ) }</p>
+					<p>{ __( 'Loading weather data…', 'weather-block' ) }</p>
 				</div>
 			);
 		}

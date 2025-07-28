@@ -23,7 +23,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
 function initializeWeatherBlock( block ) {
 	const location = block.dataset.location;
 	const units = block.dataset.units || 'metric';
-	const displayMode = block.dataset.displayMode || 'auto';
 
 	if ( ! location ) {
 		showError( block, 'No location specified.' );
