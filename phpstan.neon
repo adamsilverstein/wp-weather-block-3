@@ -1,0 +1,27 @@
+parameters:
+	level: 5
+	paths:
+		- weather-block.php
+		- includes/
+	excludePaths:
+		- vendor/
+		- node_modules/
+		- build/
+		- tests/
+	
+	# WordPress-specific configuration
+	bootstrapFiles:
+		- vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
+	
+	# Use WordPress extension
+	wordpress:
+		wpContentDir: .
+	
+	# Ignore errors for WordPress-specific code
+	ignoreErrors:
+		- '#Function wp_[a-zA-Z_]+ not found#'
+		- '#Constant [A-Z_]+ not found#'
+		- '#Call to function [a-zA-Z_]+ with no body#'
+		
+includes:
+	- vendor/szepeviktor/phpstan-wordpress/extension.neon

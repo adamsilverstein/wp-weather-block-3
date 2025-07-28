@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+	bootstrap="tests/bootstrap.php"
+	backupGlobals="false"
+	colors="true"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+	processIsolation="false"
+	stopOnFailure="false"
+	>
+	<testsuites>
+		<testsuite name="Weather Block Test Suite">
+			<directory>./tests/</directory>
+		</testsuite>
+	</testsuites>
+	<coverage>
+		<include>
+			<directory suffix=".php">./includes/</directory>
+			<file>./weather-block.php</file>
+		</include>
+		<exclude>
+			<directory>./vendor/</directory>
+			<directory>./node_modules/</directory>
+			<directory>./build/</directory>
+			<directory>./tests/</directory>
+		</exclude>
+	</coverage>
+	<php>
+		<server name="SERVER_NAME" value="localhost"/>
+	</php>
+</phpunit>
