@@ -1,0 +1,27 @@
+{
+	"name": "wordpress/weather-block",
+	"description": "A WordPress block that displays weather information for a specified location.",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"php": ">=7.4"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"phpunit/phpunit": "^9.0",
+		"wp-coding-standards/wpcs": "^3.0",
+		"phpstan/phpstan": "^1.0",
+		"szepeviktor/phpstan-wordpress": "^1.0"
+	},
+	"scripts": {
+		"lint": "phpcs",
+		"lint:fix": "phpcbf",
+		"test": "phpunit",
+		"analyze": "phpstan analyze"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}

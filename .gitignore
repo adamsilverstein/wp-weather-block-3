@@ -1,30 +1,75 @@
-# Logs
-logs
+# Build directories
+build/
+dist/
+
+# Dependencies
+node_modules/
+vendor/
+
+# Log files
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
 # Coverage directory used by tools like istanbul
-coverage
+coverage/
+*.lcov
 
-# Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
+# Test output
+.nyc_output
+test-results/
+playwright-report/
 
-# Dependency directories
-node_modules/
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# WordPress specific
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+
+# Composer
+composer.phar
+
+# PHPUnit
+.phpunit.result.cache
+
+# Plugin zip files
+*.zip
+
+# Temporary files
+tmp/
+temp/
 
 # Optional npm cache directory
 .npm
 
 # Optional eslint cache
 .eslintcache
-
-# Output of `npm pack`
-*.tgz
-
-# Output of `wp-scripts plugin-zip`
-*.zip
-
-# dotenv environment variables file
-.env

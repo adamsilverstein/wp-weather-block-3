@@ -1,8 +1,22 @@
 {
 	"name": "weather-block",
 	"version": "0.1.0",
-	"description": "Example block scaffolded with Create Block tool.",
+	"description": "A WordPress block that displays weather information for a specified location.",
 	"author": "The WordPress Contributors",
 	"license": "GPL-2.0-or-later",
-	"scripts": {}
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start",
+		"test:e2e": "wp-scripts test-e2e",
+		"test:unit": "wp-scripts test-unit-js"
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.48.0",
+		"@wordpress/scripts": "^30.20.0"
+	}
 }
